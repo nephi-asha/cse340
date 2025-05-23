@@ -1,0 +1,159 @@
+
+@media screen and (max-width: 900px) {
+  #wrapper {
+    margin: 1rem 2vw;
+    min-width: unset;
+    max-width: 100vw;
+  }
+  .content-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .upgrades-section, .reviews-section {
+    width: 100%;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 600px) {
+  #wrapper {
+    min-width: unset;
+    max-width: 100vw;
+    padding: 0.5rem;
+    border-width: 2.5px;
+  }
+
+  header {
+    flex-direction: row;
+    padding: 0.5rem 0.2rem;
+  }
+
+  .siteName a {
+    font-size: 1.3rem;
+  }
+
+  #top-header a {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  nav ul li {
+    margin: 0 0.2rem;
+  }
+  nav ul li a {
+    padding: 0.3rem 0.7rem;
+  }
+
+  .welcome-title {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.7rem 0;
+  }
+
+  .hero-section {
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    width: 100%;
+    position: static;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    box-shadow: none;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.4rem;
+    max-width: 100%;
+    min-width: unset;
+    text-align: left;
+  }
+
+  .delorean-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .delorean-features {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .own-today-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-image img {
+    border-radius: 0.4rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content-row {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .upgrades-section, .reviews-section {
+    width: 100%;
+  }
+
+  .upgrades-section h2,
+  .reviews-section h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .upgrade-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.1rem;
+  }
+
+  .upgrade-link img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 0.3rem;
+  }
+
+  .upgrade-link span {
+    font-size: 0.95rem;
+  }
+
+  .reviews-list {
+    font-size: 0.95rem;
+    padding-left: 1.1rem;
+  }
+
+  .reviews-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -4,3 +4,218 @@
 *:after {
   box-sizing: border-box;
 }
+
+img {
+  border: 0;
+}
+
+body {
+  background-image: url("/images/site/checkerboard.jpg");
+}
+
+#wrapper {
+  background-color: #fafafa;
+  color: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  border: 5px solid skyblue;
+  max-width: 900px;
+  min-width: 700px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#top-header a {
+  text-decoration: none;
+  color: #222;
+  padding: 1rem;
+
+}
+
+
+.siteName a {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  display: block;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.5rem 0 1rem 0;
+  text-align: left;
+}
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+  background-size: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  background: rgba(255,255,255,0.85);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 270px;
+  min-width: 220px;
+  text-align: left;
+}
+
+.delorean-title {
+  color: #00aaff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.delorean-features {
+  color: #00aaff;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.delorean-features li {
+  margin-bottom: 0.2rem;
+}
+
+.own-today-btn {
+  display: inline-block;
+  background: #00c4e4;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.own-today-btn:hover {
+  background: #008bb9;
+}
+
+/* Content Row: Upgrades and Reviews */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.upgrades-section, .reviews-section {
+  width: 48%;
+}
+
+.upgrades-section h2,
+.reviews-section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.upgrade-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eaf6fb;
+  border-radius: 0.4rem;
+  padding: 0.7rem 0.2rem;
+  text-decoration: none;
+  color: #00aaff;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+
+.upgrade-link:hover {
+  background: #d0f0ff;
+}
+
+.upgrade-link img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 0.2rem;
+  background: #fff;
+  border: 1px solid #cce7f6;
+}
+
+.upgrade-link span {
+  margin-top: 0.2rem;
+  color: #00aaff;
+  font-size: 1rem;
+}
+
+.reviews-list {
+  list-style: none;
+  padding-left: 0;
+  color: #222;
+  font-size: 1rem;
+}
+
+.reviews-list li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: left;
+  color: #888;
+  font-size: 0.95rem;
+}
