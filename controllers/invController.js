@@ -19,4 +19,28 @@ invCont.buildByClassificationId = async function (req, res, next) {
   })
 }
 
+/* ***************************
+ *  Build vehicle detail view by inventory id
+ * ************************** */
+invCont.buildDetailByInvId = async function (req, res, next) {
+  const invId = req.params.invId
+  const vehicle = await invModel.getVehicleByInvId(invId)
+  if (!vehicle) {
+    return res
+      .status(404)
+      .render("errors/error", { title: "Vehicle Not Found" })
+  }
+  const nav = await utilities.getNav()
+  const vehicleDetail = utilities.buildVehicleDetail(vehicle)
+  res.render("./inventory/detail", {
+    title: `${vehicle.inv_make} ${vehicle.inv_model}`,
+    nav,
+    vehicleDetail,
+  })
+}
+
+invCont.triggerIntentionalError = function (req, res, next) {
+  next(new Error("Intentional server error for testing (500)."))
+}
+
 module.exports = invCont

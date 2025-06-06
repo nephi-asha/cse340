@@ -55,6 +55,31 @@ Util.buildClassificationGrid = async function(data){
   return grid
 }
 
+Util.buildVehicleDetail = function(vehicle) {
+  if (!vehicle) return '<p class="notice">Vehicle not found.</p>';
+  // Format price and mileage
+  const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(vehicle.inv_price);
+  const mileage = new Intl.NumberFormat('en-US').format(vehicle.inv_miles);
+  // Use full-size image
+  const imageUrl = vehicle.inv_image || '/images/vehicles/no-image.png';
+  return `
+    <div class="vehicle-detail-container">
+      <div class="vehicle-detail-image">
+        <img src="${imageUrl}" alt="Image of ${vehicle.inv_make} ${vehicle.inv_model}" />
+      </div>
+      <div class="vehicle-detail-info">
+        <h1>${vehicle.inv_year} ${vehicle.inv_make} ${vehicle.inv_model}</h1>
+        <h2 class="vehicle-detail-price">${price}</h2>
+        <ul class="vehicle-detail-list">
+          <li><strong>Mileage:</strong> ${mileage} miles</li>
+          <li><strong>Color:</strong> ${vehicle.inv_color}</li>
+          <li><strong>Description:</strong> ${vehicle.inv_description}</li>
+        </ul>
+      </div>
+    </div>
+  `;
+}
+
 Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
 
 module.exports = Util

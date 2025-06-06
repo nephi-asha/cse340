@@ -23,7 +23,7 @@ app.set("layout", "./layouts/layout");
  * Routes
  *************************/
 app.use(static)
-app.use("/inv", inventoryRoute)
+app.use("/inv", utilities.handleErrors(inventoryRoute))
 app.get("/", utilities.handleErrors(baseController.buildHome))
 
 
