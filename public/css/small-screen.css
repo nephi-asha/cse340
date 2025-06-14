@@ -29,6 +29,11 @@
     max-width: 100%;
     height: auto;
   }
+
+  .inventory-form, .classification-form {
+    padding: 1.2rem 0.7rem;
+    max-width: 98vw;
+  }
 }
 
 /* Responsive for mobile */
@@ -187,5 +192,15 @@
   }
   .vehicle-detail-image img {
     border-radius: 0.4rem;
+  }
+
+  .inventory-form, .classification-form {
+    padding: 0.7rem 0.2rem;
+    max-width: 100vw;
+    font-size: 0.98rem;
+  }
+  .inventory-form button, .classification-form button {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
   }
 }
